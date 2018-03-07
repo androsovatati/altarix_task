@@ -1,0 +1,96 @@
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    width: $content-width;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+.tab {
+    flex-grow: 1;
+    border-radius: 3px 3px 0 0;
+
+    &_active {
+        background: white;
+        box-shadow: 3px -2px 5px 0px $tabs-shadow-color, 
+                   -3px -2px 5px 0px $tabs-shadow-color;
+    }
+
+    &__icon {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.hexagon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: $hex-width;
+    height: $hex-height;
+    margin: 60px;
+    background: black;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: $hex-top-bottom-reverse;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-left: $hex-border solid transparent;
+        border-right: $hex-border solid transparent;
+        border-bottom: $hex-top-bottom solid black;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: $hex-top-bottom-reverse;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-left: $hex-border solid transparent;
+        border-right: $hex-border solid transparent;
+        border-top: $hex-top-bottom solid black;
+    }
+
+    &_blue {
+        background: $blue-hex-bg;
+        &::before {
+            border-bottom: $hex-top-bottom solid $blue-hex-bg;
+        }
+        &::after {
+            border-top: $hex-top-bottom solid $blue-hex-bg;
+        }
+    }
+    &_yellow {
+        background: $yellow-hex-bg;
+        &::before {
+            border-bottom: $hex-top-bottom solid $yellow-hex-bg;
+        }
+        &::after {
+            border-top: $hex-top-bottom solid $yellow-hex-bg;
+        }
+    }
+    &_green {
+        background: $green-hex-bg;
+        &::before {
+            border-bottom: $hex-top-bottom solid $green-hex-bg;
+        }
+        &::after {
+            border-top: $hex-top-bottom solid $green-hex-bg;
+        }
+    }
+    &_orange {
+        background: $orange-hex-bg;
+        &::before {
+            border-bottom: $hex-top-bottom solid $orange-hex-bg;
+        }
+        &::after {
+            border-top: $hex-top-bottom solid $orange-hex-bg;
+        }
+    }
+}
