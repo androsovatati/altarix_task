@@ -1,0 +1,41 @@
+.choose {
+    display: flex;
+    justify-content: space-between;
+    width: $content-width;
+    margin: 0 auto;
+    padding-top: 23px;
+    padding-bottom: 52px;
+
+    &__image {
+        margin-left: -18px;
+    }
+
+    &__title {
+        @extend .MyriadPro-Regular;
+        padding-top: 32px;
+        padding-left: 10px;
+        font-size: 32px;
+        color: $title-font-color;
+        letter-spacing: 0.3px;
+    }
+
+    &__advantages {
+        padding-top: 10px;
+    }
+
+    .advantage {
+        display: flex;
+        align-items: flex-end;
+
+        &__marker {
+            padding: 0 11px;
+        }
+
+        &__text {
+            @extend .MyriadPro-Regular;
+            font-size: 16px;
+            color: $advantage-font-color;
+            padding-top: 20px;
+        }
+    } 
+}

@@ -1,0 +1,101 @@
+.forms {
+    border-bottom: 1px solid $divider-color;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: $content-width;
+        margin: 0 auto;
+        padding: 25px 0 34px;
+    }
+}
+
+.login-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__container {
+        background: $login-form-bg;
+        padding: 13px 20px 19px 26px;
+        width: 468px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    &__title {
+        @extend .MyriadPro-Regular;
+        font-size: 28px;
+        color: white;
+        padding-bottom: 21px;
+    }
+
+    &__input {
+        @extend .MyriadPro-Regular;
+        font-size: 16px;
+        color: $title-font-color;
+        padding: 4px 10px;
+        width: 137px;
+        border: none;
+    }
+
+    &__button {
+        @extend .MyriadPro-Regular;
+        padding: 6px 13px;
+        font-size: 16px;
+        color: white;
+        background: $login-form-btn;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background: $login-form-btn;
+        }
+    }
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__container {
+        background: $subscription-form-bg;
+        padding: 13px 20px 19px 26px;
+        width: 468px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    &__title {
+        @extend .MyriadPro-Regular;
+        font-size: 28px;
+        color: white;
+        padding-bottom: 21px;
+    }
+
+    &__input {
+        @extend .MyriadPro-Regular;
+        width: 250px;
+        font-size: 16px;
+        color: $title-font-color;
+        padding: 4px 10px;
+        border: none;
+    }
+
+    &__button {
+        @extend .MyriadPro-Regular;
+        padding: 6px 13px;
+        font-size: 16px;
+        color: white;
+        background: $subscription-form-btn;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background: $subscription-form-btn;
+        }
+    }
+}

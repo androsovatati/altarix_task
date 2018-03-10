@@ -6,6 +6,81 @@
     background-size: cover;
 
     &__content {
+        position: relative;
         width: $content-width;
+        min-height: 488px;
+    }
+
+    &__arrow {
+        padding-top: 122px;
+
+        &_left {
+            padding-right: 25px;
+        }
+        &_right {
+            padding-left: 25px;
+        }
+    }
+
+    &__top-line {
+        display: flex;
+        justify-content: space-between;
+        margin: 49px 80px 0 97px;
+    }
+
+    .menu {
+        &__list {
+            display: flex;
+            justify-content: flex-end;
+        }
+        &__link {
+            padding-left: 43px;
+            color: white;
+            @extend .MyriadPro-Regular;
+            font-size: 22px;
+            text-decoration: none;
+            line-height: 31px;
+        }
+    }
+
+    &__banner-content {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 109px;
+    }
+    &__banner-image {
+        position: absolute;
+        bottom: -57px;
+        left: 113px;
+    }
+    &__banner-text {
+        width: 503px;
+    }
+    &__banner-title {
+        color: white;
+        @extend .MyriadPro-Regular;
+        
+        & p:first-child {
+            font-size: 64px;
+        }
+        & p:last-child {
+            font-size: 44px;
+            line-height: 52px;
+        }
+    }
+    &__banner-button {
+        margin-top: 27px;
+        padding: 5px 22px;
+        background: $header-btn-bg;
+        color: white;
+        @extend .MyriadPro-Regular;
+        font-size: 22px;
+        border: 4px solid rgba(0,0,0,.15);
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background: $header-btn-hover-bg;
+        }
     }
 }

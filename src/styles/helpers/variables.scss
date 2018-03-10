@@ -1,13 +1,28 @@
 $content-width: 1024px;
 
-$tabs-shadow-color: #dedede;
+$header-btn-bg: rgba(18, 179, 103, .42);
+$header-btn-hover-bg: rgba(18, 179, 103, .8);
 
+$tabs-shadow-color: #dedede;
+$tabs-font-color: #5f5f5f;
+
+$title-font-color: #4f4f4f;
+$text-font-color: #818181;
+
+$advantage-font-color: #8a8888; 
+
+$divider-color: #e5e5e5;
+
+$login-form-bg: #e67624;
+$subscription-form-bg: #01d4f3;
+$login-form-btn: #444;
+$subscription-form-btn: #029bb1;
 
 /** hex variables start **/
 $hex-width: 134px;
 $hex-height: 75px; 
-$hex-top-bottom: 35px; 
-$hex-top-bottom-reverse: -35px; 
+$hex-top-bottom: 40px; 
+$hex-top-bottom-reverse: -40px; 
 $hex-border: 67px;
 
 $blue-hex-bg: #6598e6;

@@ -1,13 +1,5 @@
-@include font-face(roboto-light, Roboto-Light, 300);
-@include font-face(roboto-regular, Roboto-Regular, 400);
-@include font-face(roboto-medium, Roboto-Medium, 600);
-@include font-face(roboto-bold, Roboto-Bold, 700);
+@include font-face(MyriadPro-Light, MyriadPro-Light, 300);
+@include font-face(MyriadPro-Regular, MyriadPro-Regular, 400);
+@include font-face(MyriadPro-Semibold, MyriadPro-Semibold, 600);
+@include font-face(MyriadPro-Bold, MyriadPro-Bold, 700);
 
-@font-face {
-    font-family: 'AGOpus_Bold';
-    src: url('fonts/AGOpus_Bold.woff');
-}
-.agopus-bold {
-    font-family: 'AGOpus_Bold';
-    font-weight: 800;
-}

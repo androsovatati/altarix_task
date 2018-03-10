@@ -1,3 +1,64 @@
 .footer {
     background: url('images/footer-bg.jpg');
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: $content-width;
+        margin: 0 auto;
+        padding-top: 25px;
+    }
+
+    &__menu {
+
+        &>ul>li:first-child a {
+            @extend .MyriadPro-Regular;
+            font-size: 22px;
+            color: white;
+            text-decoration: none;
+        }
+        &>ul>li:not(:first-child) a {
+            font-family: Arial;
+            font-weight: 400;
+            font-size: 13px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    &__testimonials {
+        max-width: 320px;
+
+        .testimonials {
+
+            &__header {
+                display: flex;
+                align-items: center;
+                @extend .MyriadPro-Regular;
+                font-size: 22px;
+                color: white;
+                text-decoration: none;
+            }
+            &__text {
+                font-family: Arial;
+                font-weight: 400;
+                font-size: 13px;
+                color: white;
+
+                &_accent {
+                    font-family: Arial;
+                    font-size: 13px;
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    
+    &__copyright {
+        font-family: Arial;
+        font-weight: 400;
+        font-size: 13px;
+        color: white;
+    }
 }
