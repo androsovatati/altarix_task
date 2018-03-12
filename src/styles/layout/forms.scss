@@ -6,7 +6,7 @@
         justify-content: space-between;
         width: $content-width;
         margin: 0 auto;
-        padding: 25px 0 34px;
+        padding: 25px 0 32px;
     }
 }
 
@@ -27,7 +27,7 @@
         @extend .MyriadPro-Regular;
         font-size: 28px;
         color: white;
-        padding-bottom: 21px;
+        padding-bottom: 19px;
     }
 
     &__input {
@@ -48,9 +48,10 @@
         border: none;
         outline: none;
         cursor: pointer;
+        transition: background .2s ease;
 
         &:hover {
-            background: $login-form-btn;
+            background: $login-form-hover-btn;
         }
     }
 }
@@ -72,7 +73,7 @@
         @extend .MyriadPro-Regular;
         font-size: 28px;
         color: white;
-        padding-bottom: 21px;
+        padding-bottom: 19px;
     }
 
     &__input {
@@ -86,16 +87,17 @@
 
     &__button {
         @extend .MyriadPro-Regular;
-        padding: 6px 13px;
+        padding: 6px 23px;
         font-size: 16px;
         color: white;
         background: $subscription-form-btn;
         border: none;
         outline: none;
         cursor: pointer;
+        transition: background .2s ease;
 
         &:hover {
-            background: $subscription-form-btn;
+            background: $subscription-form-hover-btn;
         }
     }
 }
