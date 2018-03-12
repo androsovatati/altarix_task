@@ -13,12 +13,19 @@
 
     &__arrow {
         padding-top: 122px;
+        opacity: 0.2;
+        transition: opacity .2s ease;
+        cursor: pointer;
 
         &_left {
             padding-right: 25px;
         }
         &_right {
             padding-left: 25px;
+        }
+
+        &:hover {
+            opacity: 1;
         }
     }
 
@@ -33,13 +40,34 @@
             display: flex;
             justify-content: flex-end;
         }
-        &__link {
+        &__item {
             padding-left: 43px;
+        }
+        &__link {
+            position: relative;
             color: white;
             @extend .MyriadPro-Regular;
             font-size: 22px;
             text-decoration: none;
             line-height: 31px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -2px;
+                height: 2px;
+                background: white;
+                opacity: 0;
+                transform: scaleX(0);
+                transition: transform .3s ease, opacity .5s ease;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+                opacity: .8;
+            }
         }
     }
 
@@ -69,14 +97,17 @@
         }
     }
     &__banner-button {
-        margin-top: 27px;
-        padding: 5px 22px;
+        margin-top: 31px;
+        margin-left: 7px;
+        padding: 5px 25px;
         background: $header-btn-bg;
         color: white;
         @extend .MyriadPro-Regular;
         font-size: 22px;
-        border: 4px solid rgba(0,0,0,.15);
         outline: none;
+        border: none;
+        box-shadow: 0 0 1px 3px rgba(0,0,0,.15);
+        transition: background .3s ease;
         cursor: pointer;
 
         &:hover {
