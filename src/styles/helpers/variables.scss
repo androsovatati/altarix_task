@@ -28,12 +28,12 @@ $hex-top-bottom-reverse: -40px;
 $hex-border: 67px;
 
 $blue-hex-bg: #6598e6;
-$yellow-hex-bg: #fdcf0a;
-$green-hex-bg: #12b367;
+$yellow-hex-bg: hsl(49, 98%, 52%);
+$green-hex-bg: hsl(152, 82%, 39%);
 $orange-hex-bg: #e67624;
 
 $blue-hex-hover-bg: hsl(216, 72%, 60%);
-$yellow-hex-hover-bg: hsl(49, 98%, 47%);
+$yellow-hex-hover-bg: red;
 $green-hex-hover-bg: hsl(152, 82%, 33%);
 $orange-hex-hover-bg: hsl(25, 80%, 46%);
 /** hex variables end **/

@@ -21,7 +21,7 @@
         cursor: pointer;
 
         &:hover {
-            transform: translateY(-10px);
+            transform: translateY(3px);
 
             .hexagon_blue {
                 background: $blue-hex-hover-bg;
@@ -33,7 +33,7 @@
                 }
             }
             .hexagon_yellow {
-                background: $yellow-hex-hover-bg;
+                background: $yellow-hex-hover-bg !important;
                 &::before {
                     border-bottom: $hex-top-bottom solid $yellow-hex-hover-bg;
                 }

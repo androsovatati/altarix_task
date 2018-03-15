@@ -2,6 +2,7 @@
 
 const bs = require('browser-sync').create(),
       cssmin = require('gulp-cssmin'),
+      concat = require('gulp-concat'),
       del = require('del'),
       imagemin = require('gulp-imagemin'),
       gulp = require('gulp'),
@@ -23,7 +24,14 @@ gulp.task('sass', ['html'], function () {
         .pipe(prefix({browsers: ['last 2 versions'], cascade: true}))
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./build'))
+        .pipe(gulp.dest('./build/styles'))
+        .pipe(bs.stream());
+});
+
+gulp.task('js', function() {
+    return gulp.src('./src/scripts/*.js')
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('./build/scripts'))
         .pipe(bs.stream());
 });
 
@@ -39,10 +47,16 @@ gulp.task('server', function () {
 gulp.task('watch', function () {
     gulp.watch('./src/*.html', ['html']);
     gulp.watch('./src/styles/**/*.scss', ['sass']);
+    gulp.watch('./src/scripts/*.js', ['js']);
 });
 
 gulp.task('clean', function () {
     return del('./build/*');
+});
+
+gulp.task('libs', function () {
+    return gulp.src('./src/libs/**/*.*')
+        .pipe(gulp.dest('./build/libs'))
 });
 
 gulp.task('image', function () {
@@ -56,6 +70,6 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('./build/fonts'))
 });
 
-gulp.task('build', ['clean', 'html', 'sass', 'image', 'fonts']);
+gulp.task('build', ['clean', 'html', 'sass', 'js', 'libs', 'image', 'fonts']);
 
-gulp.task('default', ['html', 'sass', 'server', 'watch']);
+gulp.task('default', ['html', 'sass', 'js', 'server', 'watch']);

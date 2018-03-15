@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('images/bg.jpg');
+    background: url('../images/bg.jpg');
     background-size: cover;
 
     &__content {
@@ -71,20 +71,20 @@
         }
     }
 
-    &__banner-content {
+    .banner__content {
         display: flex;
         justify-content: flex-end;
         padding-top: 109px;
     }
-    &__banner-image {
+    .banner__image {
         position: absolute;
         bottom: -57px;
         left: 113px;
     }
-    &__banner-text {
+    .banner__text {
         width: 503px;
     }
-    &__banner-title {
+    .banner__title {
         color: white;
         @extend .MyriadPro-Regular;
         
@@ -96,7 +96,7 @@
             line-height: 52px;
         }
     }
-    &__banner-button {
+    .banner__button {
         margin-top: 31px;
         margin-left: 7px;
         padding: 5px 25px;
