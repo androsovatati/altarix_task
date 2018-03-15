@@ -25,6 +25,7 @@ $(function() {
         dots: false,
         rewind: false,
         autoplay: true,
+        mobile: false,
         autoplayTimeout: 5000,
         smartSpeed: 1500,
         items: 1
@@ -56,6 +57,10 @@ $(function() {
     $('.testimonials__arrow_right').click(function() {
         $('.testimonials__carousel.owl-carousel').trigger('next.owl.carousel');
     });
+
+    $('.header__menu-icon').click(function() {
+        $(this).hasClass('active') ? $(this).removeClass('active') : $(this).addClass('active');
+    })
     
     
 });
