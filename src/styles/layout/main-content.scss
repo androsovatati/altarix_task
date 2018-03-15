@@ -8,9 +8,22 @@
     box-sizing: border-box;
 
     &__image {
+        position: relative;
         display: block;
         width: 713px;
+        height: 339px;
         margin: 0 auto;
+    }
+
+    &__device-image {
+        position: absolute;
+        top: 7px;
+    }
+
+    &__screen-image {
+        position: absolute;
+        left: 80px;
+        top: 2px;
     }
 
     &__title {

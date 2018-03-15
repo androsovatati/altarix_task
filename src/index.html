@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Altarix Test</title>
+    <link href="libs/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="libs/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="libs/css/animate.css" rel="stylesheet">
     <link href="styles/main.min.css" rel="stylesheet">
 </head>
 
@@ -22,23 +25,35 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Solutions</a>
+                                <a href="#solutions" class="menu__link">Solutions</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Products</a>
+                                <a href="#solutions" class="menu__link">Products</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Portfolio</a>
+                                <a href="#portfolio" class="menu__link">Portfolio</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Contact</a>
+                                <a href="#portfolio" class="menu__link">Contact</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <div class="banner">
-                <div class="banner__content">
+            <div class="banner owl-carousel owl-theme">
+                <div class="banner__content item">
+                    <div class="banner__image">
+                        <img src="images/banner-img.png" alt="coffie">
+                    </div>
+                    <div class="banner__text">
+                        <div class="banner__title">
+                            <p>Introducing</p>
+                            <p>Something hot......</p>
+                        </div>
+                        <button class="banner__button">Try Demo</button>
+                    </div>
+                </div>
+                <div class="banner__content item">
                     <div class="banner__image">
                         <img src="images/banner-img.png" alt="coffie">
                     </div>
@@ -57,7 +72,7 @@
         </div>
     </header>
     <main>
-        <div class="tabs">
+        <div class="tabs" id="solutions">
             <div class="tab">
                 <div class="tab__image">
                     <div class="hexagon hexagon_blue">
@@ -104,7 +119,10 @@
             </div>
         </div>
         <section class="main-content">
-            <img src="images/ipad.png" alt="device" class="main-content__image">
+            <div class="main-content__image">
+                <img src="images/device.png" alt="device" class="main-content__device-image">
+                <img src="images/screen.png" alt="screen" class="main-content__screen-image wow fadeInUp" data-wow-offset="200">
+            </div>
             <h2 class="main-content__title">Lorem Ipsum is simply dummy text</h2>
             <div class="main-content__text">
                 <p>
@@ -125,11 +143,11 @@
                 </p>
             </div>
         </section>
-        <section class="choose">
-            <div class="choose__image">
+        <section class="choose" id="portfolio">
+            <div class="choose__image wow fadeInLeft">
                 <img src="images/screenshot.png" alt="screenshot">
             </div>
-            <div class="choose__content">
+            <div class="choose__content wow fadeInUp">
                 <div class="choose__title">Why choose us ?</div>
                 <ul class="choose__advantages">
                     <li class="advantage">
@@ -161,7 +179,7 @@
         </section>
         <section class="forms">
             <div class="forms__content">
-                <div class="login-form__container">
+                <div class="login-form__container wow fadeInUp" data-wow-delay="1s">
                     <div class="login-form__title">Member login</div>
                     <form class="login-form">
                         <input type="text" name="username" class="login-form__input" placeholder="User name">
@@ -169,7 +187,7 @@
                         <button class="login-form__button">Log me in.</button>
                     </form>
                 </div>
-                <div class="subscription-form__container">
+                <div class="subscription-form__container wow fadeInUp" data-wow-delay="1.5s">
                     <div class="subscription-form__title">Subscribe to our weekly newsletter</div>
                     <form class="subscription-form">
                         <input type="email" class="subscription-form__input" placeholder="email address">
@@ -235,18 +253,32 @@
                     <div class="testimonials__header">
                         <div class="testimonials__title">Testimonials</div>
                         <div class="testimonials__arrows">
-                            <img class="testimonials__arrow" src="images/left-arrow2.png">
-                            <img class="testimonials__arrow" src="images/right-arrow2.png">
+                            <img class="testimonials__arrow testimonials__arrow_left" src="images/left-arrow2.png">
+                            <img class="testimonials__arrow testimonials__arrow_right" src="images/right-arrow2.png">
                         </div>
                     </div>
-                    <p class="testimonials__text">
-                        Lorem Ipsum is simply dummy text of the printing and 
-                        typesetting industry. Lorem Ipsum has been the industr
-                        standard dummy text ever since the 1500s, 
-                        when an unknown printer took a 
-                    </p>
-                    <p class="testimonials__text_accent">Lorem Ipsum is simply</p>
-                    <p class="testimonials__text_accent">Owner, Lorem Ipsum</p>
+                    <div class="testimonials__carousel owl-carousel owl-theme">
+                        <div class="item">
+                            <p class="testimonials__text">
+                                Lorem Ipsum is simply dummy text of the printing and 
+                                typesetting industry. Lorem Ipsum has been the industr
+                                standard dummy text ever since the 1500s, 
+                                when an unknown printer took a 
+                            </p>
+                            <p class="testimonials__text_accent">Lorem Ipsum is simply</p>
+                            <p class="testimonials__text_accent">Owner, Lorem Ipsum</p>
+                        </div>
+                        <div class="item">
+                            <p class="testimonials__text">
+                                Lorem Ipsum is simply dummy text of the printing and 
+                                typesetting industry. Lorem Ipsum has been the industr
+                                standard dummy text ever since the 1500s, 
+                                when an unknown printer took a 
+                            </p>
+                            <p class="testimonials__text_accent">Lorem Ipsum is simply</p>
+                            <p class="testimonials__text_accent">Owner, Lorem Ipsum</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer__owner">
@@ -259,7 +291,10 @@
             </div>
         </div>
     </footer>
-    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/js/jquery-3.3.1.min.js"></script>
+    <script src="libs/js/owl.carousel.min.js"></script>
+    <script src="libs/js/wow.min.js"></script>
+    <script src="libs/js/velocity.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 

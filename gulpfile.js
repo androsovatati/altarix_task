@@ -20,7 +20,7 @@ gulp.task('html', function () {
 gulp.task('sass', ['html'], function () {
     return gulp.src('./src/styles/main.scss')
         .pipe(sass().on('error', notify.onError({title: 'sass'})))
-        .pipe(uncss({html: ['./build/index.html']}))
+        // .pipe(uncss({html: ['./build/index.html']}))
         .pipe(prefix({browsers: ['last 2 versions'], cascade: true}))
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))

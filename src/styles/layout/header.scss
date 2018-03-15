@@ -8,7 +8,7 @@
     &__content {
         position: relative;
         width: $content-width;
-        min-height: 488px;
+        max-height: 488px;
     }
 
     &__arrow {
@@ -78,7 +78,7 @@
     }
     .banner__image {
         position: absolute;
-        bottom: -57px;
+        bottom: -112px;
         left: 113px;
     }
     .banner__text {
@@ -114,4 +114,8 @@
             background: $header-btn-hover-bg;
         }
     }
+}
+
+.header .owl-carousel .owl-stage-outer {
+    height: 400px;
 }
