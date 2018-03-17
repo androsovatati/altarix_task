@@ -39,3 +39,46 @@
         }
     } 
 }
+
+@media (max-width: 1070px) {
+    .choose {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 750px;
+        padding-bottom: 15px;
+    }
+}
+@media (max-width: 800px) {
+    .choose {
+        position: relative;
+        width: 100%;
+
+        &__image {
+            margin-left: 0;
+
+            img {
+                max-width: 500px;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    .choose {
+        &__title {
+            padding-top: 15px;
+            padding-left: 10px;
+            font-size: 26px;
+        }
+        .advantage {
+            &__marker {
+                padding: 7px 11px;
+            }
+            &__text {
+                font-size: 16px;
+                padding-top: 15px;
+            }
+        } 
+    }
+}

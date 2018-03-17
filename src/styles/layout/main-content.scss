@@ -26,6 +26,10 @@
         top: 2px;
     }
 
+    &__ipad-image {
+        display: none;
+    }
+
     &__title {
         @extend .MyriadPro-Regular;
         padding-top: 23px;
@@ -43,6 +47,114 @@
 
         & p {
             padding-top: 24px;
+        }
+    }
+}
+
+@media (max-width: 1070px) {
+    .main-content {
+        width: 750px;
+        padding: 50px 40px;
+
+        &__image {
+            height: auto;
+            width: 100%;
+        }
+        &__screen-image {
+            display: block;
+            margin: 0 auto;
+            width: 438px;
+            left: 115px;
+            top: -10px;
+        }
+        &__device-image {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 570px;
+        }
+    }
+}
+
+@media (max-width: 799px) {
+    .main-content {
+        width: 550px;
+        padding: 40px 30px;
+    
+        &__screen-image {
+            width: 337px;
+            left: 75px;
+            top: 0px;
+        }
+        &__device-image {
+            width: 450px;
+        }
+        &__title {
+            padding-top: 23px;
+            font-size: 32px;
+        }
+    
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+    
+            & p {
+                padding-top: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .main-content {
+        width: 430px;
+        padding: 40px 20px;
+    
+        &__screen-image {
+            width: 266px;
+            left: 61px;
+            top: 0px;
+        }
+        &__device-image {
+            width: 350px;
+        }
+        &__title {
+            padding-top: 15px;
+            font-size: 28px;
+        }
+    
+        &__text {
+            line-height: 20px;
+    
+            & p {
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        width: auto;
+        margin: 0 10px;
+        box-sizing: border-box;
+
+        &__screen-image, &__device-image {
+            display: none;
+        }
+        &__ipad-image {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 250px;
+        }
+        &__title {
+            font-size: 24px;
+            padding-bottom: 5px;
+        }
+        &__text {
+            & p:last-child {
+                display: none;
+            }
         }
     }
 }

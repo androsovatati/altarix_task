@@ -4,6 +4,12 @@ $(function() {
 
     $('a[href*="#"]').on('click', function (e) {
         var target = $(this).attr('href');
+
+        if ($('.header__menu-icon').hasClass('active')) {
+            $('body').css('overflow','visible');
+            $('.header__menu-icon').removeClass('active');
+            $('.menu').removeClass('mobile');
+        }
         
         $(target).velocity('scroll', {
             duration: 800,

@@ -113,3 +113,24 @@
         }
     }
 }
+
+@media (max-width: 1070px) {
+    .footer {
+        &__content {
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        &-menu, &__testimonials, &__owner {
+            margin: 0 10px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .footer__testimonials {
+        display: none;
+    }
+}
