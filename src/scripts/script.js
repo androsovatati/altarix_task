@@ -15,7 +15,7 @@ $(function() {
 
         $('.tab_active').removeClass('tab_active');
         $(this).addClass('tab_active');
-        
+
     });
 
     $('.banner.owl-carousel').owlCarousel({
@@ -59,7 +59,15 @@ $(function() {
     });
 
     $('.header__menu-icon').click(function() {
-        $(this).hasClass('active') ? $(this).removeClass('active') : $(this).addClass('active');
+        if ($(this).hasClass('active')) {
+            $('body').css('overflow','visible');
+            $(this).removeClass('active');
+            $('.menu').removeClass('mobile');
+        } else {
+            $('body').css('overflow','hidden');
+            $(this).addClass('active');  
+            $('.menu').addClass('mobile');
+        } 
     })
     
     
